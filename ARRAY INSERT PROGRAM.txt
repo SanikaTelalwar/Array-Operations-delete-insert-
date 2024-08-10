@@ -1,0 +1,31 @@
+ARRAY INSERT PROGRAM:
+
+#include<stdio.h>
+void main()
+{
+	int a[100],i,n,pos,num;
+	printf("enter the number of element you want in an array: \n");
+	scanf("%d",&n);
+	printf("array elements are:\n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+		
+	}
+	printf("enter the new element you want to insert in an array:\n");
+	scanf("%d",&num);
+	printf("enter the position where new element to be inserted in an array:\n");
+	scanf("%d",&pos);
+	for(i=n-1;i>=pos-1;i--)
+	{
+		a[i+1]=a[i];
+	}
+	a[pos-1]=num;
+	n++;
+	printf("array after inserting a new element:\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+	
+}
